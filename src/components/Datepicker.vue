@@ -139,7 +139,7 @@ export default {
     },
     parse: {
       type: Function,
-      default: v => new Date(v),
+      default: v => new Date(v)
     },
     language: {
       type: Object,
