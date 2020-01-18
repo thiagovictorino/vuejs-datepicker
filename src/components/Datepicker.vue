@@ -9,6 +9,7 @@
       :id="id"
       :name="name"
       :refName="refName"
+      :parse="parse"
       :openDate="openDate"
       :placeholder="placeholder"
       :inputClass="inputClass"
@@ -135,6 +136,10 @@ export default {
     format: {
       type: [String, Function],
       default: 'dd MMM yyyy'
+    },
+    parse: {
+      type: Function,
+      default: v => new Date(v),
     },
     language: {
       type: Object,
