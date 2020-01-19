@@ -220,6 +220,9 @@ const utils = {
     let year = this.getFullYear(date)
     let month = this.getMonth(date) + 1
     let day = this.getDate(date)
+    let hour = this.getHours(date)
+    let minutes = this.getMinutes(date)
+
     let str = format
       .replace(/dd/, ('0' + day).slice(-2))
       .replace(/d/, day)
@@ -231,6 +234,8 @@ const utils = {
       .replace(/M(?!a|ä|e)/, month)
       .replace(/su/, this.getNthSuffix(this.getDate(date)))
       .replace(/D(?!e|é|i)/, this.getDayNameAbbr(date, translation.days))
+      .replace(/HH/, ('0' + hour).slice(-2))
+      .replace(/mm/, ('0' + minutes).slice(-2))
     return str
   },
 
