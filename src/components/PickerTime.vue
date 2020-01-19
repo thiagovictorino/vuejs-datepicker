@@ -5,7 +5,7 @@
         <div class="day__calendar_btn" @click="showDayCalendar" :class="allowedToShowView('day') ? 'up' : ''">{{ formattedValue }}</div>
     </header>
         <span class="cell time time_up" @click="setHours(1)">up</span><span class="cell"> </span><span class="cell time time_up" @click="setMinutes(1)">up</span>
-        <span class="cell time">{{utils.getHours(selectedDate)}}</span><span class="cell">:</span><span class="cell time">{{utils.getMinutes(selectedDate)}}</span>
+        <span class="cell time">{{('0' + utils.getHours(selectedDate)).slice(-2)}}</span><span class="cell">:</span><span class="cell time">{{('0' + utils.getMinutes(selectedDate)).slice(-2)}}</span>
         <span class="cell time time_down" @click="setHours(-1)">down</span><span class="cell"> </span><span class="cell time time_down" @click="setMinutes(-1)">down</span>
   </div>
 </template>
