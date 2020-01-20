@@ -69,7 +69,7 @@ export default {
       if (!this.selectedDate) {
         return '--:--'
       }
-      return `${this.utils.getHours(this.selectedDate)}:${this.utils.getMinutes(this.selectedDate)}`
+      return `${('0' + this.utils.getHours(this.selectedDate)).slice(-2)}:${('0' + this.utils.getMinutes(this.selectedDate)).slice(-2)}`
     },
 
     /**
