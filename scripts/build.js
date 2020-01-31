@@ -10,16 +10,16 @@ export default [{
   input: path.join(__dirname, '..', 'src', 'components', 'Datepicker.vue'),
   output: [
     {
-      file: 'dist/vuejs-datepicker.js',
+      file: 'dist/vuejs-datetimepicker.js',
       format: 'umd',
-      name: 'vuejsDatepicker'
+      name: 'vuejsDatetimepicker'
     },
     {
-      file: 'dist/vuejs-datepicker.common.js',
+      file: 'dist/vuejs-datetimepicker.common.js',
       format: 'cjs'
     },
     {
-      file: 'dist/vuejs-datepicker.esm.js',
+      file: 'dist/vuejs-datetimepicker.esm.js',
       format: 'es'
     }
   ],
@@ -32,9 +32,9 @@ export default [{
 }, {
   input: path.join(__dirname, '..', 'src', 'components', 'Datepicker.vue'),
   output: {
-    file: 'dist/vuejs-datepicker.min.js',
+    file: 'dist/vuejs-datetimepicker.min.js',
     format: 'umd',
-    name: 'vuejsDatepicker'
+    name: 'vuejsDatetimepicker'
   },
   plugins: [
     vue({css: true}),
